@@ -1,0 +1,1 @@
+import FrontEndSkillsForPMs from "../app";
