@@ -10,6 +10,7 @@ var babelify = require("babelify"),
   karma = require("karma"),
   merge = require("merge-stream"),
   minifycss = require("gulp-minify-css"),
+  nunjucksRender = require("gulp-nunjucks-render"),
   rename = require("gulp-rename"),
   source = require("vinyl-source-stream"),
   uglify = require("gulp-uglify");
@@ -63,11 +64,14 @@ gulp.task("build:dist:js", ["build:js", "build:dist:copy"], function() {
     pipe(gulp.dest("dist/js"));
 });
 
-// Copy and compress HTML files
+// Compile and compress HTML files
 gulp.task("build:html", ["build:clean"], function() {
-  return gulp.src(config.srcDir + "html/**/*.html").
-    pipe(cleanhtml()).
-    pipe(gulp.dest("build/html"));
+  return gulp.src(["src/html/**/*.html", "!src/html/templates/**/*"])
+  .pipe(nunjucksRender({
+    path: config.srcDir + "html/templates"
+  }))
+  .pipe(cleanhtml())
+  .pipe(gulp.dest("build"))
 });
 
 // Build the browserify bundle including the app
