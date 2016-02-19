@@ -1,0 +1,23 @@
+.button-example {
+  font-size: 1.5em;
+}
+
+.text-example {
+  font-size: 1.5em;
+}
+
+.reveal .font-size-xl {
+  font-size: 150%;
+}
+
+.reveal .font-size-lg {
+  font-size: 125%;
+}
+
+.reveal .font-size-md {
+  font-size: 80%;
+}
+
+.reveal .font-size-sm {
+  font-size: 60%;
+}
