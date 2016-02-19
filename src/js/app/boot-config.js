@@ -1,6 +1,5 @@
 let bootConfig = {
   reveal: {
-    controls: false,
     height: 720,
     history: true,
     keyboard: {
@@ -14,6 +13,9 @@ let bootConfig = {
       27: function() { return false; },
       79: function() { return false; }
       //116: function() { console.log("F5 pressed"); return true }
+    },
+    onReady: function() {
+      window.focus();
     },
     transition: "convex",
     width: 1280
