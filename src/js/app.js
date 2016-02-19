@@ -1,3 +1,5 @@
-let FrontEndSkillsForPMs = {};
+import Boot from "./app/boot";
+import BootConfig from "./app/boot-config";
 
-export default FrontEndSkillsForPMs;
+let bootloader = new Boot(BootConfig);
+bootloader.boot();
