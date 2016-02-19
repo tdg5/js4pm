@@ -10,9 +10,11 @@
     }
   ],
   "dependencies": {
+    "highlight.js": "^9.1.0",
     "jquery": "^2.1.4",
     "page": "^1.6.4",
-    "postal": "1.0.7"
+    "postal": "1.0.7",
+    "reveal": "0.0.4"
   },
   "description": "Front-end Skills for PMs",
   "devDependencies": {
