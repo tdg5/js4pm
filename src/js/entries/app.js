@@ -1,1 +1,1 @@
-import FrontEndSkillsForPMs from "../app";
+import "../app";

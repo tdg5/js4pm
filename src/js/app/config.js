@@ -1,4 +1,4 @@
-let bootConfig = {
+let config = {
   reveal: {
     height: 720,
     history: true,
@@ -22,4 +22,4 @@ let bootConfig = {
   },
 };
 
-export default bootConfig;
+export default config;

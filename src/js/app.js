@@ -1,5 +1,7 @@
-import Boot from "./app/boot";
-import BootConfig from "./app/boot-config";
+import App from "./framework/app";
+import appConfig from "./app/config";
 
-let bootloader = new Boot(BootConfig);
-bootloader.boot();
+let app = new App(appConfig);
+app.boot();
+
+export default app;
