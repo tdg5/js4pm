@@ -13,8 +13,8 @@ var pkgFiles = {
     "@karma-tests"
   ],
   "karma-tests": [
-    "test/**/*_test.js",
-    "src/js/**/test/**/*_test.js"
+    "test/**/*-test.js",
+    "src/js/**/test/**/*-test.js"
   ]
 };
 
