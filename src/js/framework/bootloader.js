@@ -1,8 +1,10 @@
 import HighlightBoot from "./boot/highlight";
 import RevealBoot from "./boot/reveal";
+import SlideActivator from "./slide-activator";
 
 let bootableModules = [
   HighlightBoot,
+  SlideActivator,
   RevealBoot,
 ];
 

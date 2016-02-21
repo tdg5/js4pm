@@ -1,3 +1,5 @@
+import Slides from "../slides";
+
 let config = {
   reveal: {
     controls: false,
@@ -8,8 +10,9 @@ let config = {
     overview: false,
     touch: false,
     transition: "convex",
-    width: 1280
+    width: 1280,
   },
+  slides: Slides,
 };
 
 export default config;
