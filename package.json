@@ -44,12 +44,17 @@
     "karma-jasmine": "~0.3.6",
     "karma-phantomjs-launcher": "~0.2.1",
     "karma-script-launcher": "~0.1.0",
+    "local-web-server": "^1.1.1",
     "merge-stream": "^1.0.0",
     "moment": "^2.10.6",
     "phantomjs": "^1.9.8",
     "vinyl-source-stream": "^1.1.0"
   },
   "license": "MIT",
+  "local-web-server": {
+    "directory": "./build",
+    "port": 8100
+  },
   "maintainers": [
     {
       "name": "Danny Guinther",
