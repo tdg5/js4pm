@@ -33,7 +33,7 @@ gulp.task("build:clean", function() {
 });
 
 // Copy files that don't require any build process
-gulp.task("build:copy", ["build:clean"], function() {
+gulp.task("build:copy", function() {
   gulp.src(["src/images/*"]).
     pipe(gulp.dest("build/images"));
   return gulp.src("src/manifest.json").
@@ -41,7 +41,7 @@ gulp.task("build:copy", ["build:clean"], function() {
 });
 
 // Build CSS
-gulp.task("build:css", ["build:clean"], function() {
+gulp.task("build:css", function() {
   return gulp.src("src/css/**/*.css").
     pipe(minifycss({root: "src/css", keepSpecialComments: 0})).
     pipe(gulp.dest("build/css"));
@@ -65,7 +65,7 @@ gulp.task("build:dist:js", ["build:js", "build:dist:copy"], function() {
 });
 
 // Compile and compress HTML files
-gulp.task("build:html", ["build:clean"], function() {
+gulp.task("build:html", function() {
   return gulp.src(["src/html/**/*.html", "!src/html/templates/**/*"])
   .pipe(nunjucksRender({
     path: config.srcDir + "html/templates"
@@ -75,7 +75,7 @@ gulp.task("build:html", ["build:clean"], function() {
 });
 
 // Build the browserify bundle including the app
-gulp.task("build:js", ["lint", "build:clean"], function(done) {
+gulp.task("build:js", ["lint"], function(done) {
   function basename(filePath) {
     var components = filePath.split(/\//);
     return components[components.length - 1];
@@ -140,10 +140,10 @@ gulp.task("watch", function() {
   paths = [
     "config/**/*.js",
     "gulpfile.js",
-    "src/js/**/*.js",
+    "src/**/*.*",
     "test/**/*.js"
   ];
-  gulp.watch(paths, ["test"]);
+  gulp.watch(paths, ["build"]);
 });
 
 gulp.task("default", ["test"]);
