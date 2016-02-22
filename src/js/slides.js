@@ -1,4 +1,7 @@
+import HelloWorld from "./slides/hello-world";
+
 let slides = [
+  HelloWorld,
 ];
 
 let Slides = {};
