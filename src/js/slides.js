@@ -1,7 +1,9 @@
 import HelloWorld from "./slides/hello-world";
+import HelloWorldJsFiddle from "./slides/hello-world-jsfiddle";
 
 let slides = [
   HelloWorld,
+  HelloWorldJsFiddle,
 ];
 
 let Slides = {};
