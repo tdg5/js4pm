@@ -9,7 +9,7 @@ var babelify = require("babelify"),
   gutil = require("gulp-util"),
   karma = require("karma"),
   merge = require("merge-stream"),
-  minifycss = require("gulp-minify-css"),
+  cleanCSS = require("gulp-clean-css"),
   nunjucksRender = require("gulp-nunjucks-render"),
   rename = require("gulp-rename"),
   source = require("vinyl-source-stream"),
@@ -42,8 +42,8 @@ gulp.task("build:copy", function() {
 
 // Build CSS
 gulp.task("build:css", function() {
-  return gulp.src("src/css/**/*.css").
-    pipe(minifycss({root: "src/css", keepSpecialComments: 0})).
+  return gulp.src("src/css/entries/*.css").
+    pipe(cleanCSS({root: "src/css", keepSpecialComments: 0})).
     pipe(gulp.dest("build/css"));
 });
 
