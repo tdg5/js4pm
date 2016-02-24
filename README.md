@@ -1,1 +1,1 @@
-# Front-End Skills For PMs
+# JavaScript for Product Managers
