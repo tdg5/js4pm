@@ -7,6 +7,7 @@ let config = {
     help: false,
     history: true,
     keyboard: true,
+    progress: false,
     touch: false,
     transition: "convex",
     width: 1280,
