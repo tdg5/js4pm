@@ -12,11 +12,15 @@ class HelloWorld extends Slide {
     let elem = this.element.querySelector(".slide-action");
     elem.addEventListener("click", function() {
       alert("Hello, World!");
-      if(!self.completed) { self.completed = true; }
+      if(!self.completed) {
+        self.completed = true;
+        self.showControls();
+      }
     });
   }
 
   activate() {
+    if (!this.completed) { this.hideControls(); }
   }
 }
 
