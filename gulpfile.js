@@ -43,7 +43,11 @@ gulp.task("build:copy", function() {
 // Build CSS
 gulp.task("build:css", function() {
   return gulp.src("src/css/entries/*.css").
-    pipe(cleanCSS({root: "src/css", keepSpecialComments: 0})).
+    pipe(cleanCSS({
+      keepSpecialComments: 0,
+      relativeTo: "",
+      root: "",
+    })).
     pipe(gulp.dest("build/css"));
 });
 
