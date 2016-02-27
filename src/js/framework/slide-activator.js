@@ -20,17 +20,37 @@ class SlideActivator {
   registerHandlerSlidechanged() {
     let slideActivator = this;
     Reveal.addEventListener("slidechanged", function(event) {
-      let controllerName = event.currentSlide.getAttribute("slide-controller");
-      if(!controllerName) { return; }
-      let slide = slideActivator.slideCache.get(controllerName, event);
-      if(!slide) { return; }
-      if(Reveal.isReady()) {
-        slide.activate();
-      } else {
-        Reveal.addEventListener("ready", function() { slide.activate(); });
-      }
+      deactivatePreviousSlide(slideActivator, event);
+      activateCurrentSlide(slideActivator, event);
     });
   }
+}
+
+function activateCurrentSlide(slideActivator, event) {
+  let controllerName = event.currentSlide.getAttribute("slide-controller");
+  if(!controllerName) { return; }
+
+  let slide = slideActivator.slideCache.get(controllerName, event);
+  if(!slide) { return; }
+
+  if(Reveal.isReady()) {
+    slide.activate();
+  } else {
+    Reveal.addEventListener("ready", function() { slide.activate(); });
+  }
+}
+
+function deactivatePreviousSlide(slideActivator, event) {
+  let previousSlide = event.previousSlide;
+  if(!previousSlide) { return; }
+
+  let controllerName = previousSlide.getAttribute("slide-controller");
+  if(!controllerName) { return; }
+
+  let slide = slideActivator.slideCache.get(controllerName, event);
+  if(!slide) { return; }
+
+  if(Reveal.isReady()) { slide.deactivate(); }
 }
 
 function extractSlideConfig(event) {

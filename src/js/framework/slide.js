@@ -5,6 +5,8 @@ class Slide {
   }
 
   activate() {}
+
+  deactivate() {}
 }
 
 export default Slide;
