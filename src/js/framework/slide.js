@@ -1,4 +1,6 @@
 import Reveal from "reveal";
+import {dom as DOM} from "./dom";
+import {styler as Styler} from "./styler";
 
 let HIDE_CONTROLS_CONFIG = { controls: false },
   SHOW_CONTROLS_CONFIG = { controls: true };
@@ -15,9 +17,11 @@ class Slide {
 
   hideControls() {
     Reveal.configure(HIDE_CONTROLS_CONFIG);
+    Styler.show(DOM.controlsLock);
   }
 
   showControls() {
+    Styler.hide(DOM.controlsLock);
     Reveal.configure(SHOW_CONTROLS_CONFIG);
   }
 }

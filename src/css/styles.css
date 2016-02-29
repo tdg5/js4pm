@@ -2,6 +2,26 @@
   font-size: 1.5em;
 }
 
+.controls-lock {
+  background-image: url(/images/lock.png);
+  bottom: 10px;
+  height: 110px;
+  opacity: .7;
+  position: fixed;
+  right: 10px;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  width: 110px;
+  z-index: 29;
+}
+
+.controls-lock.hidden {
+  opacity: 0;
+}
+
 .text-example {
   font-size: 1.5em;
 }
