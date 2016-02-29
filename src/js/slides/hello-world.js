@@ -1,3 +1,4 @@
+import {slideshow} from "../framework/slideshow";
 import Slide from "../framework/slide";
 
 class HelloWorld extends Slide {
@@ -14,13 +15,13 @@ class HelloWorld extends Slide {
       alert("Hello, World!");
       if(!self.completed) {
         self.completed = true;
-        self.showControls();
+        slideshow.showControls();
       }
     });
   }
 
   activate() {
-    if (!this.completed) { this.hideControls(); }
+    if (!this.completed) { slideshow.hideControls(); }
   }
 }
 
