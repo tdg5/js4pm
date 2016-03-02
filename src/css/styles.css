@@ -41,3 +41,11 @@
 .reveal .font-size-sm {
   font-size: 60%;
 }
+
+.reveal .margin-top-md {
+  margin-top: 1em;
+}
+
+ul.unstyled {
+  list-style-type: none;
+}
