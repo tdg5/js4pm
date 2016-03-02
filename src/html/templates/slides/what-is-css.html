@@ -1,8 +1,45 @@
 <section>
   <h1>CSS</h1>
-  <p class="fragment font-size-sm">can you pronounce that for me?</p>
+  <h2 class="fragment">Cascading Style Sheets</h2>
 </section>
 <section>
-  <h1>Cascading Style Sheets</h1>
-  <p class="fragment font-size-sm">i think i liked "CSS" better</p>
+  <h2>CSS</h2>
+  <ul>
+    <li>Describes how the HTML document should display visually</li>
+    <li>"Cascading" describes how one stylesheet can override another</li>
+    <ul>
+      <li>
+        In most situations, the last stylesheet to define a style wins out over
+        any previously defined styles
+      </li>
+    </ul>
+    <li>CSS selectors target which elements to add styles to</li>
+    <li>
+      CSS properties describe what aspects of the element should be styled and
+      how
+    </li>
+  </ul>
+</section>
+<section>
+  <h2>A simple stylesheet</h2>
+  <div>
+    <pre><code class="css font-size-lg" data-trim>
+/*
+  This selector targets the &lt;html&gt; element to add a white background and
+  border
+*/
+html {
+  background-color: white;
+  border: 1px solid black;
+}
+
+/*
+  This selector targets any element that has a class of "call-to-action" to
+  change the elements background color to red.
+*/
+.call-to-action {
+  background-color: red;
+}
+    </code></pre>
+  </div>
 </section>
