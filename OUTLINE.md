@@ -66,14 +66,6 @@
 ### Exercise: Fetch JSON file from server
 ### Dev Tools: Chrome Developer Tools - Network Panel
 
-## Framework Breakout Sessions
-### D3 (Danny)
-#### Demo of what exercise will explore
-##### [Demo](http://bl.ocks.org/mbostock/4063318)
-#### Exercise: Create GitHub-style calendar visualization
-### Angular.js (Kim)
-#### Demo of what exercise will explore
-#### Exercise: Set up two-way binding (?)
-### Phaser.js (Matt)
-#### Demo of what exercise will explore
-#### Exercise: Game basics
+## Angular
+### Application framework
+#### Exercise: Set up two-way binding
