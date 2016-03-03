@@ -33,10 +33,12 @@ function activateCurrentSlide(slideActivator, event) {
   let slide = slideActivator.slideCache.get(controllerName, event);
   if(!slide) { return; }
 
+  function activator() { slide.activate(event); }
+
   if(Reveal.isReady()) {
-    slide.activate();
+    activator();
   } else {
-    Reveal.addEventListener("ready", function() { slide.activate(); });
+    Reveal.addEventListener("ready", activator);
   }
 }
 
@@ -48,15 +50,18 @@ function deactivatePreviousSlide(slideActivator, event) {
   if(!controllerName) { return; }
 
   let slide = slideActivator.slideCache.get(controllerName, event);
-  if(!slide) { return; }
+  if(!slide || !Reveal.isReady()) { return; }
 
-  if(Reveal.isReady()) { slide.deactivate(); }
+  slide.deactivate(event);
 }
 
 function extractSlideConfig(event) {
   return {
     element: event.currentSlide,
-    postion: [event.indexh, event.indexv],
+    position: {
+      indexh: event.indexh,
+      indexv: event.indexv,
+    },
   };
 }
 
