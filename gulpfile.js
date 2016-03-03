@@ -10,7 +10,7 @@ var babelify = require("babelify"),
   karma = require("karma"),
   merge = require("merge-stream"),
   cleanCSS = require("gulp-clean-css"),
-  nunjucksRender = require("gulp-nunjucks-render"),
+  nunjucksGulp = require("./util/nunjucks-gulp"),
   rename = require("gulp-rename"),
   source = require("vinyl-source-stream"),
   uglify = require("gulp-uglify");
@@ -71,8 +71,8 @@ gulp.task("build:dist:js", ["build:js", "build:dist:copy"], function() {
 // Compile and compress HTML files
 gulp.task("build:html", function() {
   return gulp.src(["src/html/**/*.html", "!src/html/templates/**/*"])
-  .pipe(nunjucksRender({
-    path: config.srcDir + "html/templates"
+  .pipe(nunjucksGulp({
+    templateDir: srcDir + "html/templates",
   }))
   .pipe(cleanhtml())
   .pipe(gulp.dest("build"))

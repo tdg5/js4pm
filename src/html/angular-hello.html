@@ -1,16 +1,1 @@
-<!doctype html>
-<html ng-app>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      {%- raw -%}
-      <h1>Hello {{yourName}}!</h1>
-      {% endraw %}
-    </div>
-  </body>
-</html>
+{% include "src/angular-hello.html" %}
