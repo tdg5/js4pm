@@ -9,20 +9,24 @@ class HelloWorld extends Slide {
   }
 
   init() {
-    let self = this;
     let elem = this.element.querySelector(".slide-action");
-    elem.addEventListener("click", function() {
-      alert("Hello, World!");
-      if(!self.completed) {
-        self.completed = true;
-        slideshow.showControls();
-      }
-    });
+    elem.addEventListener("click", onClickHandler(this));
   }
 
-  activate() {
-    if (!this.completed) { slideshow.hideControls(); }
+  activate(event) {
+    if (this.completed) { return; }
+    slideshow.hideControls();
   }
+}
+
+function onClickHandler(slide) {
+  return function() {
+    alert("Hello, World!");
+    if(!slide.completed) {
+      slide.completed = true;
+      slideshow.showControls();
+    }
+  };
 }
 
 export default HelloWorld;
