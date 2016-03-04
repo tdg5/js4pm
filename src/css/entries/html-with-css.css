@@ -1,18 +1,16 @@
 /*
-  This selector targets the <html> element to add a white background and
-  border
-*/
-html {
-  background-color: white;
-  border: 1px solid black;
-}
-
-/*
   This selector targets any element that has a class of "call-to-action" to
   change the elements background color to red.
 */
 .call-to-action {
-  background-color: red;
-  height: 100%;
-  width: 100%;
+  background-color: red; /* Make the background of the button red */
+  border: 0;             /* with no border */
+  border-radius: 4px;    /* with rounded corners */
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+                         /* ^ with a faint shadow */
+  color: white;          /* with white text */
+  font-size: 2em;        /* with text twice the normal size */
+  height: 100%;          /* with a height 100% the height of its parent */
+  cursor: pointer;       /* with a pointer-finger mouse cursor */
+  width: 100%;           /* with a width 100% the width of its parent */
 }
