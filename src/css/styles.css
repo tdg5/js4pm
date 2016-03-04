@@ -50,12 +50,16 @@
   margin-top: 1em;
 }
 
-iframe.example {
+.reveal iframe.example {
   background-color: #fff;
   border: 1px solid #000;
   padding: 10px;
 }
 
-ul.unstyled {
+.reveal img.unstyled {
+  border: 0;
+}
+
+.reveal ul.unstyled {
   list-style-type: none;
 }
