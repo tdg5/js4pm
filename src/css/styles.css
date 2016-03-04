@@ -22,12 +22,48 @@
   opacity: 0;
 }
 
+.definition {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: .5em;
+  box-shadow: 0 .05em 0 .1em rgba(0, 0, 0, .1);
+  padding: 1em;
+  text-align: left;
+}
+
+.definition.compact {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+}
+
+.definition .body {
+  padding-left: 1em;
+}
+
+.definition .content {
+  font-size: 80%;
+}
+
+.definition .family {
+  font-style: italic;
+}
+
+.definition .term {
+  font-weight: bold;
+  font-size: 120%;
+}
+
 .text-example {
   font-size: 1.5em;
 }
 
 .reveal pre code {
   max-height: 100%;
+}
+
+.reveal .definition {
+  margin-top: 1em;
+  padding: 1em;
 }
 
 .reveal .font-size-xl {
