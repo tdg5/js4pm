@@ -21,7 +21,7 @@ class EscapedIncludeTag {
 
   run(context, templatePath) {
     var template = context.env.getTemplate(templatePath);
-    var output = template.tmplStr
+    var output = template.render();
     output = context.env.filters.escape(output);
     // Remove raw tags
     var rawMatcher = /{% +raw +%}\n?/;
