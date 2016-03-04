@@ -51,12 +51,6 @@
 ### Events
 #### DOM events
 #### Exercise: Enable button when input text changes
-### Dialogs
-#### Three kinds of dialog
-#### alert
-#### confirm
-#### prompt
-#### Exercise: Add a confirm dialog to an action
 
 ## jQuery
 ### DOM Manipulation
