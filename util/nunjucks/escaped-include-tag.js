@@ -23,12 +23,6 @@ class EscapedIncludeTag {
     var template = context.env.getTemplate(templatePath);
     var output = template.render();
     output = context.env.filters.escape(output);
-    // Remove raw tags
-    var rawMatcher = /{% +raw +%}\n?/;
-    output = context.env.filters.replace(output, rawMatcher, "");
-    // Remove raw tags
-    var endrawMatcher = /{% +endraw +%}\n?/;
-    output = context.env.filters.replace(output, endrawMatcher, "");
     output = context.env.filters.safe(output);
     return output;
   }
