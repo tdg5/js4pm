@@ -53,6 +53,11 @@
   font-size: 120%;
 }
 
+.reveal .help {
+  border-bottom: 1px dashed #3b759e;
+  cursor: help;
+}
+
 .text-example {
   font-size: 1.5em;
 }
@@ -80,6 +85,16 @@
 
 .reveal .font-size-sm {
   font-size: 60%;
+}
+
+.reveal .help {
+  border-bottom: .0625em dashed #3b759e;
+  cursor: help;
+}
+
+.reveal a.help:hover {
+  border-bottom: .0625em dashed #74a7cb;
+  color: #74a7cb;
 }
 
 .reveal .margin-top-md {
