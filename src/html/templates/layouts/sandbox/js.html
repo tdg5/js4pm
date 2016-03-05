@@ -7,14 +7,14 @@
   <body>
     <div class="sandbox single-language">
       <div class="row">
-        <div class="cell codemirror" data-line-numbers data-mode="javascript">
-{% block jsContent %}{% endblock %}
-        </div>
+        <pre class="cell codemirror" data-line-numbers data-mode="javascript">
+{%- block jsContent -%}{%- endblock -%}
+        </pre>
       </div>
       <div class="row">
-        <div class="cell result">
-{% block resultContent %}{% endblock %}
-        </div>
+        <pre class="cell result">
+{%- block resultContent -%}{%- endblock -%}
+        </pre>
       </div>
     </div>
   </body>

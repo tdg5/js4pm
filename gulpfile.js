@@ -75,7 +75,7 @@ gulp.task("build:html", function() {
     templateDir: srcDir + "html/templates",
   }))
   .pipe(cleanhtml())
-  .pipe(gulp.dest("build"))
+  .pipe(gulp.dest("build"));
 });
 
 // Build the browserify bundle including the app
