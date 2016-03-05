@@ -5,6 +5,10 @@ class Sandbox {
     this.codeMirrors = {};
     this.result = "";
   }
+
+  compile() {
+    eval(this.codeMirrors.javascript.getValue());
+  }
 }
 
 export default Sandbox;

@@ -60,7 +60,8 @@ function initializeMirror(mirror, config) {
   let lineNumbersAttr = element.attributes["data-line-numbers"];
   if (lineNumbersAttr) { options.lineNumbers = true; }
 
-  Codemirror(element, options);
+  let codeMirror = Codemirror(element, options);
+  mirror.getValue = function() { return codeMirror.getValue(); };
 }
 
 export default CodeMirror;

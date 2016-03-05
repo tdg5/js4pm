@@ -5,16 +5,23 @@
     <link href="/css/sandbox.css" rel="stylesheet">
   </head>
   <body>
-    <div class="sandbox single-language">
+    <div class="sandbox">
       <div class="row">
         <pre class="cell codemirror" data-line-numbers data-mode="javascript">
 {%- block jsContent -%}{%- endblock -%}
         </pre>
       </div>
       <div class="row">
-        <pre class="cell result">
+        <div class="cell result">
+          <ul class="toolbar">
+            <li class="action">
+              <button data-action="run">&#9654;</button>
+            </li>
+          </ul>
+          <pre class="output">
 {%- block resultContent -%}{%- endblock -%}
-        </pre>
+          </pre>
+        </div>
       </div>
     </div>
   </body>

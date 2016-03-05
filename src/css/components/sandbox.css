@@ -35,6 +35,28 @@
   width: 100%;
 }
 
+.sandbox .row .cell .toolbar .action button {
+  font-size: 1em;
+  padding: .1em;
+}
+
 .sandbox .row .cell.result {
   background-color: #f7f7f7;
+}
+
+.sandbox .row .cell .toolbar {
+  background-color: #f7f7f7;
+  display: block;
+  height: 1.5em;
+  list-style: none;
+  margin: 0 0 -1.5em;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.sandbox .row .cell .output {
+  height: 100%;
+  margin-bottom: -1.75em;
+  padding-top: 1.75em;
 }

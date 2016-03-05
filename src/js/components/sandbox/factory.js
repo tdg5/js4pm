@@ -9,10 +9,16 @@ class SandboxFactory {
   }
 }
 
-function initializeSandbox(sandbox) {
-  let element = sandbox.element;
-  let mirrors = element.querySelectorAll(".codemirror");
-  initializeMirrors(sandbox, mirrors);
+function initializeActions(sandbox, actions) {
+  for (let actionIndex = 0; actionIndex < actions.length; ++actionIndex) {
+    let elem = actions[actionIndex];
+    let dataAction = elem.attributes["data-action"].value;
+    if (dataAction === "run") {
+      elem.addEventListener("click", function(event) {
+        sandbox.compile();
+      });
+    }
+  }
 }
 
 function initializeMirrors(sandbox, mirrors) {
@@ -21,6 +27,14 @@ function initializeMirrors(sandbox, mirrors) {
     let mirror = new CodeMirror(mirrorElem);
     sandbox.codeMirrors[mirror.mode] = mirror;
   }
+}
+
+function initializeSandbox(sandbox) {
+  let element = sandbox.element;
+  let mirrors = element.querySelectorAll(".codemirror");
+  initializeMirrors(sandbox, mirrors);
+  let actions = element.querySelectorAll(".toolbar .action button");
+  initializeActions(sandbox, actions);
 }
 
 export default SandboxFactory;
