@@ -36,27 +36,25 @@
 }
 
 .sandbox .row .cell .toolbar .action button {
+  cursor: pointer;
   font-size: 1em;
-  padding: .1em;
+  padding: .05em .5em;
 }
 
 .sandbox .row .cell.result {
   background-color: #f7f7f7;
+  position: relative;
 }
 
 .sandbox .row .cell .toolbar {
-  background-color: #f7f7f7;
-  display: block;
-  height: 1.5em;
+  bottom: 1px;
   list-style: none;
-  margin: 0 0 -1.5em;
+  margin: 0;
   padding: 0;
-  position: relative;
-  width: 100%;
+  position: absolute;
+  right: 1px;
 }
 
 .sandbox .row .cell .output {
   height: 100%;
-  margin-bottom: -1.75em;
-  padding-top: 1.75em;
 }
