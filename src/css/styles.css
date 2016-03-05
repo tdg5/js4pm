@@ -107,6 +107,16 @@
   padding: 10px;
 }
 
+.reveal .sandbox-md {
+  height: 13em;
+  width: 100%;
+}
+
+.reveal .sandbox-lg {
+  height: 17em;
+  width: 100%;
+}
+
 .reveal img.unstyled {
   border: 0;
 }

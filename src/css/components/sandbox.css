@@ -1,0 +1,40 @@
+.sandbox {
+  background-color: #fff;
+  font-size: 1.75em;
+  height: 100%;
+  width: 100%;
+}
+
+.sandbox .row {
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+}
+
+.sandbox .row .cell {
+  float: left;
+  height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 49%;
+}
+
+.sandbox .row .cell .CodeMirror {
+  height: 100%;
+}
+
+.sandbox .row .cell:first-child {
+  margin-left: 0;
+}
+
+.sandbox .row .cell:last-child {
+  margin-right: 0;
+}
+
+.sandbox .row .cell:first-child:last-child {
+  width: 100%;
+}
+
+.sandbox .row .cell.result {
+  background-color: #f7f7f7;
+}

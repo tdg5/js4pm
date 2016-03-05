@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/js/sandbox.js"></script>
+    <link href="/css/sandbox.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="sandbox">
+      <div class="row">
+        <div class="cell codemirror" data-line-numbers data-mode="htmlmixed">
+{% block htmlContent %}{% endblock %}
+        </div>
+        <div class="cell codemirror" data-line-numbers data-mode="css">
+{% block cssContent %}{% endblock %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell codemirror" data-line-numbers data-mode="javascript">
+{% block jsContent %}{% endblock %}
+        </div>
+        <div class="cell result">
+{% block resultContent %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
