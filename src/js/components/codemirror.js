@@ -5,7 +5,13 @@ import "codemirror/mode/javascript/javascript";
 
 let MODE_STRING_CSS = "css",
   MODE_STRING_HTML = "html",
-  MODE_STRING_JS = "javascript";
+  MODE_STRING_JS = "javascript",
+  KNOWN_MODES = {
+    html: MODE_STRING_HTML,
+    htmlmixed: MODE_STRING_HTML,
+    css: MODE_STRING_CSS,
+    javascript: MODE_STRING_JS,
+  };
 
 class CodeMirror {
   static get configKey() {
@@ -31,16 +37,11 @@ class CodeMirror {
   }
 
   setMode(modeString) {
-    let mode = modeString.toLowerCase();
-    let knownMode = mode === MODE_STRING_JS ||
-      mode === MODE_STRING_CSS ||
-      mode.substring(0, 4) === MODE_STRING_HTML;
-
-    if (!knownMode) {
+    let mode = KNOWN_MODES[modeString.toLowerCase()];
+    if (!mode) {
       throw new Error(`Unknown codemirror mode: ${mode}`);
     }
-    this.mode = mode;
-    return mode;
+    return this.mode = mode;
   }
 }
 
@@ -49,7 +50,10 @@ function initializeMirror(mirror, config) {
   let options = {};
 
   let modeAttr = element.attributes["data-mode"];
-  if (modeAttr) { options.mode = mirror.setMode(modeAttr.value); }
+  if (modeAttr) {
+    let mode = options.mode = modeAttr.value.toLowerCase();
+    mirror.setMode(mode);
+  }
 
   let content = element.innerHTML;
   if (content) {
