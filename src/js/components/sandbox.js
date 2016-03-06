@@ -12,7 +12,7 @@ class Sandbox {
 
   compile() {
     let content = generateContent(this);
-    let output = this.element.querySelector("iframe.output");
+    let output = this.element.querySelector(".output");
     writeContent(output, content);
   }
 }
@@ -35,7 +35,13 @@ function generateContent(sandbox) {
   return content;
 }
 
-function writeContent(iframe, content) {
+function writeContent(wrapper, content) {
+  wrapper.innerHTML = "";
+  let iframe = document.createElement("iframe");
+  iframe.setAttribute("frameborder", 0);
+  iframe.setAttribute("height", "100%");
+  iframe.setAttribute("width", "100%");
+  wrapper.appendChild(iframe);
   let iframeContent = iframe.contentWindow ||
     iframe.contentDocument.document ||
     iframe.contentDocument;
