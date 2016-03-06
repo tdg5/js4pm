@@ -92,6 +92,26 @@
   width: 100%;
 }
 
+.reveal .width-xs {
+  width: 20%;
+}
+
+.reveal .width-sm {
+  width: 25%;
+}
+
+.reveal .width-md {
+  width: 33%;
+}
+
+.reveal .width-lg {
+  width: 50%;
+}
+
+.reveal .width-xl {
+  width: 75%;
+}
+
 .reveal img.unstyled {
   border: 0;
 }
