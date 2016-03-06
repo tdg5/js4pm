@@ -97,6 +97,10 @@
   color: #74a7cb;
 }
 
+.reveal .margin-top-lg {
+  margin-top: 1.5em;
+}
+
 .reveal .margin-top-md {
   margin-top: 1em;
 }
