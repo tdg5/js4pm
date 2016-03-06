@@ -1,6 +1,8 @@
-{% extends "layouts/sandbox/js.html" %}
+{% extends "layouts/sandbox/single.html" %}
 
-{%- block jsContent -%}
+{%- block dataMode -%}javascript{%- endblock -%}
+
+{%- block content -%}
 function helloWorld() {
   alert("Hello, World!");
 }

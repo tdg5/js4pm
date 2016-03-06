@@ -1,1 +1,7 @@
-{% include "src/angular-hello.html" %}
+{% extends "layouts/sandbox/single.html" %}
+
+{%- block dataMode -%}htmlmixed{%- endblock -%}
+
+{%- block content -%}
+  {% include "src/angular-hello.html" %}
+{%- endblock -%}

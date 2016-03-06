@@ -1,1 +1,9 @@
-{% include "src/html-by-itself.html" %}
+{% extends "layouts/sandbox/single.html" %}
+
+{%- block dataMode -%}htmlmixed{%- endblock -%}
+
+{%- block content -%}
+<button class="call-to-action">
+  Click Me
+</button>
+{%- endblock -%}

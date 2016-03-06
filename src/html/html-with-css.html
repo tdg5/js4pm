@@ -1,1 +1,21 @@
-{% include "src/html-with-css.html" %}
+{% extends "layouts/sandbox/html-css.html" %}
+
+{%- block htmlContent -%}
+<button class="call-to-action">
+  Click Me
+</button>
+{%- endblock -%}
+
+{%- block cssContent -%}
+.call-to-action {
+  background-color: red;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 5px 5px rgba(0,0,0,0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+}
+{%- endblock -%}
