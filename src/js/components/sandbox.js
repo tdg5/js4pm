@@ -1,13 +1,15 @@
-let CONTENT_TOP_TO_STYLE = "<!doctype html>\n<html>\n<head>\n<style>\n",
+let SPY_SCRIPT = "<script type=\"text/javascript\" src=\"/js/sandbox-spy.js\"></script>",
+  SPY_COMPLETE_CALLBACK = "<script type=\"text/javascript\">(function(){var s=window.sandboxSpy; s&&s.complete();})()</script>",
+  CONTENT_TOP_TO_STYLE = `<!doctype html>\n<html>\n<head>\n${SPY_SCRIPT}\n<style>\n`,
   CONTENT_STYLE_TO_SCRIPT = "</style>\n<script type=\"text/javascript\">\n",
   CONTENT_SCRIPT_TO_BODY = "</script>\n</head>\n<body>\n",
-  CONTENT_BODY_TO_BOTTOM = "</body>\n</html>";
+  CONTENT_BODY_TO_BOTTOM = `${SPY_COMPLETE_CALLBACK}\n</body>\n</html>`;
 
 class Sandbox {
   constructor(element, config) {
+    this.codeMirrors = {};
     this.config = config || {};
     this.element = element;
-    this.codeMirrors = {};
   }
 
   compile() {
