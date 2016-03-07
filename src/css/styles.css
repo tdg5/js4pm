@@ -95,6 +95,11 @@
   padding: 10px;
 }
 
+.reveal .sandbox-sm {
+  height: 8em;
+  width: 100%;
+}
+
 .reveal .sandbox-md {
   height: 13em;
   width: 100%;
