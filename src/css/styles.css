@@ -24,6 +24,15 @@
   opacity: 0;
 }
 
+.invisible {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
 .reveal .help {
   border-bottom: 1px dashed #3b759e;
   cursor: help;
