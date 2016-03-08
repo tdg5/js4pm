@@ -160,6 +160,10 @@
   width: 75%;
 }
 
+.reveal .width-xxl {
+  width: 90%;
+}
+
 .reveal img.unstyled {
   background-color: transparent;
   border: 0;
