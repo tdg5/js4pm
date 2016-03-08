@@ -8,28 +8,28 @@
       Set of web authoring and debugging tools built into the browser
     </li>
     <li>
-      Each browser vendor rolls their own with a slightly different interface
+      Each browser vendor rolls their own version
     </li>
     <li>
-      Same core features are present across the board:
+      Same core features are present across the board
       <ul>
-        <li>Manipulate css on the fly</li>
-        <li>Run Javascript snippets</li>
-        <li>Monitor server requests and responses</li>
-        <li>Interact with the DOM</li>
-        <li>And more!</li>
+        <li class="fragment">Manipulate css on the fly</li>
+        <li class="fragment">Run Javascript snippets</li>
+        <li class="fragment">Monitor server requests and responses</li>
+        <li class="fragment">Interact with the DOM</li>
+        <li class="fragment">And more!</li>
       </ul>
     </li>
   </ul>
 
-  <ul class="font-size-md margin-top-md unstyled">
+  <ul class="font-size-md margin-top-md unstyled fragment">
     <li>
       <a
         href="https://developer.chrome.com/devtools"
         target="_blank"
         title="Chrome DevTools"
       >
-        Chrome Deveveloper Tools
+        Chrome Developer Tools
       </a>
     </li>
     <li>
@@ -38,7 +38,7 @@
         target="_blank"
         title="Safari Web Development Tools"
       >
-        Safari Web Development Tools
+        Safari Developer Tools
       </a>
     </li>
     <li>
@@ -56,21 +56,47 @@
         target="_blank"
         title="IE DevTools"
       >
-        Discovering Windows Internet Explorer Developer Tools
+        Internet Explorer Developer Tools
       </a>
     </li>
   </ul>
 </section>
 <section>
-  <h1>Elements Panel</h1>
-  <h2>Chrome Developer Tools</h2>
+  <h2>Web Developer Tools</h2>
+  <h3>Elements Panel</h3>
 </section>
 <section>
-  <h2>Hijack a page</h2>
-  <ul>
-    <li>Replace logo</li>
+  <p>Lets you inspect the DOM tree and edit DOM nodes on the fly</p>
+  <img
+    class="unstyled"
+    src="https://developer.chrome.com/devtools/images/elements-panel.png"
+    title="chrome devtools elements panel"
+  >
+  </img>
+</section>
+<section>
+  <p>There are several ways to inspect an element:</p>
+  <ol>
+    <li>Right-click any element on the page and select Inspect Element.</li>
+    <li>Press Ctrl + Shift + C (or Cmd + Shift + C on mac), then click on an element.</li>
+  </ol>
+</section>
+<section>
+  <h2>Hijack this page!</h2>
+  <iframe class="sandbox-sm" src="sandbox/hijack-this-page.html"></iframe>
+  <ol>
+    <li>Open the elements panel</li>
+    <li>Replace image</li>
     <li>Replace text</li>
     <li>Change colors</li>
     <li>Change positioning</li>
-  </ul>
+  </ol>
+  <div>
+    <a
+      href="https://developer.chrome.com/devtools/docs/dom-and-styles"
+      title="Editing Styles And The DOM"
+    >
+      Editing Styles And The DOM
+    </a>
+  </div>
 </section>
