@@ -1,9 +1,10 @@
-let SPY_SCRIPT = "<script type=\"text/javascript\" src=\"/js/sandbox-spy.js\"></script>",
-  SPY_COMPLETE_CALLBACK = "<script type=\"text/javascript\">(function(){var s=window.sandboxSpy; s&&s.complete();})()</script>",
-  CONTENT_TOP_TO_STYLE = `<!doctype html>\n<html>\n<head>\n${SPY_SCRIPT}\n<style>\n`,
+let RENDERING_SCRIPT = "<script type=\"text/javascript\" src=\"/js/sandbox-rendering.js\"></script>",
+  RENDERING_STYLE_SHEET_LINK = "<link rel=\"stylesheet\" href=\"/css/sandbox-rendering.css\"></link>",
+  RENDERING_COMPLETE_CALLBACK = "<script type=\"text/javascript\">(function(){window.sandboxSpy.complete();})()</script>",
+  CONTENT_TOP_TO_STYLE = `<!doctype html>\n<html>\n<head>\n${RENDERING_STYLE_SHEET_LINK}\n${RENDERING_SCRIPT}\n<style>\n`,
   CONTENT_STYLE_TO_SCRIPT = "</style>\n<script type=\"text/javascript\">\n",
   CONTENT_SCRIPT_TO_BODY = "</script>\n</head>\n<body>\n",
-  CONTENT_BODY_TO_BOTTOM = `${SPY_COMPLETE_CALLBACK}\n</body>\n</html>`;
+  CONTENT_BODY_TO_BOTTOM = `${RENDERING_COMPLETE_CALLBACK}\n</body>\n</html>`;
 
 class Sandbox {
   constructor(element, config) {

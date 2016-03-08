@@ -18,6 +18,7 @@ class Spy {
 }
 
 function dispatchEvent(event) {
+  window.document.dispatchEvent(event);
   window.parent.document.dispatchEvent(event);
 }
 

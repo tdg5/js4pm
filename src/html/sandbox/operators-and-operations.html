@@ -3,9 +3,14 @@
 {%- block dataMode -%}javascript{%- endblock -%}
 
 {%- block content -%}
-var index = 0;
-index = index + 1;
+act = 0, leadingFemale = "Juliet", leadingMale = "Romeo";
 
-var name = "Romeo";
-name = name + index;
+sandbox.log(leadingMale + " + " + leadingFemale);
+
+act = act + 1;
+sandbox.log(act);
+act += 1;
+sandbox.log(act);
+act++;
+sandbox.log(act);
 {%- endblock -%}
