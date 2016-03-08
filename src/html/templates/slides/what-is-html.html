@@ -15,34 +15,26 @@
       Web browsers transform HTML documents into visible (or audible!) web pages
     </li>
   </ul>
-  <ul class="font-size-md margin-top-md unstyled">
-    <li>
-      <a
-        href="https://en.wikipedia.org/wiki/HTML"
-        target="_blank"
-      >
-        Wikipedia.org - HTML
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"
-        target="_blank"
-      >
-        MDN Glossary - HTML
-      </a>
-    </li>
-  </ul>
 </section>
 <section>
   <h2>HTML</h2>
   <ul class="width-xl">
     <li>
-      Written in the form of HTML elements which consist of tags enclosed in
-      angle brackets (like &lt;article&gt;)
-      <p class="background-color-white margin-top-md text-align-center">
+      Written in the form of
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+        target="_blank"
+        title="Mozilla Developer Network - HTML Element Reference"
+      >
+        HTML elements
+      </a> which consist of special tags enclosed in angle brackets
+      <p class="margin-top-sm text-align-center">
         <img class="unstyled" src="images/anatomy-of-an-html-tag.png">
       </p>
+    </li>
+    <li>
+      Elements can include data other than their enclosed content in the form of
+      attributes and values
     </li>
     <li>
       Browsers don't display HTML tags, but use them to interpret the content of
@@ -79,12 +71,17 @@
   </code></pre>
 </section>
 <section>
+  <h2>HTML: Keep it simple, sailor</h2>
+  <img class="unstyled" src="/images/html-body-element.png">
+  <div class="margin-auto width-xl">
+    In the examples that follow, you can skip the rest of the HTML document and
+    assume we're working within the <code>&lt;body&gt;</code> element of an HTML document
+  </div>
+</section>
+<section>
   <h2>HTML, rendered</h2>
   <div class="margin-top-md">
     <iframe class="sandbox-md" src="sandbox/html-by-itself.html"></iframe>
   </div>
-  <p class="fragment font-size-md margin-top-md">
-    Something's missing...
-  </p>
 </section>
 {% include "exercises/html.html" %}
