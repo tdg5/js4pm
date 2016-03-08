@@ -55,6 +55,15 @@
   max-height: 100%;
 }
 
+.reveal .anatomy-of-a-variable-cropped {
+  overflow: hidden;
+  text-align: center;
+}
+
+.reveal .anatomy-of-a-variable-cropped img {
+  margin-top: -8%;
+}
+
 .reveal .background-color-white {
   background-color: #fff;
 }
@@ -158,6 +167,10 @@
 
 .reveal .width-xl {
   width: 75%;
+}
+
+.reveal .width-xxl {
+  width: 90%;
 }
 
 .reveal img.unstyled {
