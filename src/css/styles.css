@@ -4,6 +4,15 @@
   font-size: 1.5em;
 }
 
+.columns-2 {
+  overflow: hidden;
+}
+
+.columns-2 .column {
+  float: left;
+  width: 50%;
+}
+
 .controls-lock {
   background-image: url(/images/lock.png);
   bottom: 10px;
@@ -89,6 +98,10 @@
   margin-top: 1em;
 }
 
+.reveal .margin-zero {
+  margin: 0;
+}
+
 .reveal iframe.example {
   background-color: #fff;
   border: 1px solid #000;
@@ -114,6 +127,10 @@
   text-align: center;
 }
 
+.reveal .vertical-align-top {
+  vertical-align: top;
+}
+
 .reveal .width-xs {
   width: 20%;
 }
@@ -135,6 +152,7 @@
 }
 
 .reveal img.unstyled {
+  background-color: transparent;
   border: 0;
   box-shadow: none;
 }

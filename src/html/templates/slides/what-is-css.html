@@ -1,42 +1,66 @@
 <section>
   <h1>CSS</h1>
-  <h2 class="fragment">Cascading Style Sheets</h2>
+  <h2>Cascading Style Sheets</h2>
+  <img class="width-md unstyled" src="/images/css-venn-diagram.png">
 </section>
 <section>
   <h2>CSS</h2>
-  <ul>
-    <li>Defines how the HTML document should display visually</li>
-    <li>"Cascading" describes how one stylesheet can override another</li>
-    <ul>
-      <li>
-        In most situations, the last stylesheet to define a style wins out over
-        any previously defined styles
-      </li>
-    </ul>
-    <li>CSS selectors target which elements to add styles to</li>
+  <ul class="width-lg">
+    <li>Describes how an HTML document should display visually</li>
     <li>
-      CSS properties describe which aspects of the element should be styled and
+      <strong>Cascading</strong> describes how rules from one stylesheet can override
+      previously defined rules
+    </li>
+    <li>
+      Browsers use the order in which stylesheets are included in the document
+      and special
+      <a
+        href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Specificity"
+        target="_blank"
+        title="Wikipedia.org - CSS Specificity"
+      >
+      selector specificity rules
+      </a> to determine which styles should be displayed
+    </li>
+  </ul>
+  <img class="width-md unstyled vertical-align-top" src="/images/css-venn-diagram.png">
+</section>
+<section>
+  <h2>CSS</h2>
+  <ul class="width-lg">
+    <li>
+      Style sheets are composed of
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax#CSS_rulesets"
+        target="_blank"
+        title="Mozilla Developer Network - CSS Syntax - CSS Rulesets"
+      >
+        rules
+      </a>. Each rule (or ruleset) is composed of one or more selectors and a
+      block of property declarations.
+    </li>
+    <li>
+      <a
+        href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Selector"
+        target="_blank"
+        title="Wikipedia.org - CSS Selectors"
+      >
+        Selectors
+      </a> declare which part of the document a style applies to by
+      matching tags and attributes in the document
+    </li>
+    <li>
+      < a
+        href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Declaration_block"
+        target="_blank"
+        title="Wikipedia.org - CSS Declaration Block"
+      >
+        Properties
+      </a> describe which aspects of an element should be styled and
       how
     </li>
   </ul>
-  <ul class="font-size-md margin-top-md unstyled">
-    <li>
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Glossary/Css"
-        target="_blank"
-      >
-        MDN - CSS
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://en.wikipedia.org/wiki/CSS"
-        target="_blank"
-      >
-        Wikipedia.org - CSS
-      </a>
-    </li>
-  </ul>
+  <img class="vertical-align-top unstyled width-md" src="/images/anatomy-of-a-css-rule.png">
 </section>
 <section>
   <h2>A sample stylesheet</h2>
