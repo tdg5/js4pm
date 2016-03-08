@@ -48,21 +48,41 @@
 {% filter safe %}{% filter escape %}
 <!DOCTYPE html>
 <html>
-  <!--
-    The <html> element represents the root of an HTML document. It holds
-    the two main components of an HTML document, the <head> element and
-    the <body> element.
-  -->
   <head>
-    <!--
-      The <head> element usually includes metadata about the document such
-      as title, styling, and other resources required by the document.
-    -->
     <title>Hello, World!</title>
   </head>
   <body>
-    <!-- The <body> element holds the content of the document. -->
+    <button class="call-to-action">Click Me</button>
+  </body>
+</html>
+{% endfilter %}{% endfilter %}
+  </code></pre>
+</section>
+<section>
+  <h2>A heavily commented<br>short, but complete<br>HTML document</h2>
+  <pre><code class="html font-size-lg" data-trim>
+{% filter safe %}{% filter escape %}
 
+<!-- The DOCTYPE declaration identifies what type of document is represented -->
+<!DOCTYPE html>
+
+<!-- This, by the way, is an HTML comment! It has no special meaning. -->
+
+<!--
+  The <html> element is the root of an HTML document. It holds the two main
+  components of an HTML document, the <head> element and the <body> element.
+-->
+<html>
+  <!--
+    The <head> element usually includes metadata about the document such
+    as title, styling, and other resources required by the document.
+  -->
+  <head>
+    <title>Hello, World!</title>
+  </head>
+
+  <!-- The <body> element holds the content of the document. -->
+  <body>
     <!-- The <button> element represents a clickable button. -->
     <button class="call-to-action">Click Me</button>
   </body>
