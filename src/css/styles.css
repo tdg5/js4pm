@@ -55,6 +55,15 @@
   max-height: 100%;
 }
 
+.reveal .anatomy-of-a-variable-cropped {
+  overflow: hidden;
+  text-align: center;
+}
+
+.reveal .anatomy-of-a-variable-cropped img {
+  margin-top: -8%;
+}
+
 .reveal .background-color-white {
   background-color: #fff;
 }

@@ -1,0 +1,14 @@
+{% extends "layouts/sandbox/single.html" %}
+
+{%- block dataMode -%}javascript{%- endblock -%}
+
+{%- block content -%}
+name = "John";
+document.write("<p>" + name + "</p>");
+name = "Jacob";
+document.write("<p>" + name + "</p>");
+name = "Jingleheimer";
+document.write("<p>" + name + "</p>");
+name = "Schmidt";
+document.write("<p>" + name + "</p>");
+{%- endblock -%}
