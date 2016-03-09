@@ -9,8 +9,8 @@ class SandboxSlide extends Slide {
   }
 
   activate(event) {
-    if (this.completed) { return; }
-    slideshow.hideControls();
+    //if (this.completed) { return; }
+    //slideshow.hideControls();
   }
 
   renderComplete(event) {
