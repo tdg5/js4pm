@@ -1,0 +1,42 @@
+{% extends "layouts/sandbox/html-mixed.html" %}
+
+{%- block htmlContent -%}
+
+Enter a number between 1 and 10<input id="entry-field" class="normal" />
+<button id="submit">
+  Submit
+</button>
+{%- endblock -%}
+
+{%- block cssContent -%}
+.normal {
+  background-color: white;
+}
+
+.bad {
+  background-color: red;
+}
+
+.good {
+  background-color: green;
+}
+{%- endblock -%}
+
+{%- block jsContent -%}
+assignButtonClickHandler = function() {
+  var button = document.querySelector('#submit');
+  button.onclick = validateNumber;
+};
+
+validateNumber = function() {
+  var entryField = document.querySelector('#entry-field');
+  var value = Number(entryField.value);
+  if (isNaN(value) || value < 1 || value > 10) {
+    entryField.class = 'bad';
+  } else {
+    entryField.class = 'good';
+  }
+};
+
+window.onload = assignButtonClickHandler;
+{%- endblock -%}
