@@ -8,13 +8,15 @@
 ### CSS
 #### Exercise: Add a class to style an element
 
-## JavaScript
-### High-level description
+## JavaScript in the Browser
+### Makes the browser interactive
+### How JavaScript is executed
+### The Document Object Model (DOM)
+#### Dev Tools: Chrome Developer Tools - Elements Panel
+#### Exercise: Change button background on element
+### Events
 ### Variables
 #### Exercise: Declare and set a variable
-### Operators and operations
-#### Comparison operators
-#### Exercise: Try a few of the comparison operators
 ### Types
 #### Strings
 #### Numbers
@@ -22,44 +24,38 @@
 #### Objects
 #### Arrays
 #### Date
+#### Dev Tools: Chrome Developer Tools - JavaScript Console
+
+#### Exercise: Validate button (conditional logic)
+### Operators and operations
+#### Comparison operators
+#### Exercise: Try a few of the comparison operators
 #### Exercise: Try a common operation with each type
 ### Conditional statements
 #### If statements
 ##### Exercise: Show alert in some condition
 #### If-else statements
 ##### Exercise: Show alert with changing text
-### Loop statements
-#### While loops
-#### For loops
-##### Exercise: Sum numbers with for loop
+#### Dev Tools: jsfiddle
+
+#### Exercise: Add Google Analytics script in script tag
+#### Exercise: Add Facebook share button to web page via script file
+
 ### Functions
 #### Functions, arguments, results
 ##### Exercise: Call a function
 ##### Exercise: Create a function to validate a string
 
-## JavaScript in the Browser
-### Makes the browser interactive
-### How JavaScript is executed
-#### Dev Tools: jsfiddle
-#### Exercise: Add Google Analytics script in script tag
-#### Exercise: Add Facebook share button to web page via script file
-#### Dev Tools: Chrome Developer Tools - Sources Panel
-### The Document Object Model (DOM)
-#### Dev Tools: Chrome Developer Tools - Elements Panel
-#### Dev Tools: Chrome Developer Tools - JavaScript Console
-#### Exercise: Enable button when other button clicked
-### Events
-#### DOM events
-#### Exercise: Enable button when input text changes
-
 ## jQuery
 ### DOM Manipulation
 ### Event Manipulation
-### Exercise: Enable button when input text changes
-### AJAX wrapper
-### Exercise: Fetch JSON file from server
-### Dev Tools: Chrome Developer Tools - Network Panel
 
 ## Angular
 ### Application framework
 #### Exercise: Set up two-way binding
+
+## JavaScript
+### Loop statements
+#### While loops
+#### For loops
+##### Exercise: Sum numbers with for loop
