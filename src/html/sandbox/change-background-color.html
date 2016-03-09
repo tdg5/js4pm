@@ -8,21 +8,17 @@
 {% endblock %}
 
 {% block cssContent %}
-  .sexy {
-    background-color: red;
-  }
+.sexy {
+  background-color: red;
+}
 {% endblock %}
 
 {% block jsContent %}
-window.setTimeout(initButtonListener, 100);
+var buttonElement = document.getElementById('background-color-changer');
+buttonElement.addEventListener('click', changeToSexyBackground);
 
-function initButtonListener() {
-  var buttonElement = document.getElementById('background-color-changer');
-  buttonElement.addEventListener('click', changeToSexyBackground);
-
-  function changeToSexyBackground () {
-    var stuffContainerElement = document.getElementById('stuff-container');
-    stuffContainerElement.setAttribute('class', 'sexy');
-  }
+function changeToSexyBackground () {
+  var stuffContainerElement = document.getElementById('stuff-container');
+  stuffContainerElement.setAttribute('class', 'sexy');
 }
 {% endblock %}
