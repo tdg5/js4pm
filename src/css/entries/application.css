@@ -1,4 +1,4 @@
-@import url(node_modules/reveal/index.css);
+@import url(node_modules/reveal.js/css/reveal.css);
 /* Localized to avoid remote font requests */
 @import url(src/css/theme/sky.css);
 @import url(node_modules/highlight.js/styles/github-gist.css);

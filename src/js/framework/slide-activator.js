@@ -1,5 +1,5 @@
 import classify from "underscore.string/classify";
-import Reveal from "reveal";
+import Reveal from "reveal.js";
 import InstanceCache from "./instance-cache";
 
 class SlideActivator {
