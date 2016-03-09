@@ -30,10 +30,8 @@ class SandboxSlide extends Slide {
 
 function discoverIFrameDocument(element) {
   let iframe = element.querySelector("iframe");
-  let iframeContent = iframe.contentWindow ||
-    iframe.contentDocument.document ||
-    iframe.contentDocument;
-  return iframeContent.document;
+  let iframeContent = iframe.contentWindow || iframe.contentDocument;
+  return iframeContent.document || iframeContent;
 }
 
 function hideInstructions(element) {

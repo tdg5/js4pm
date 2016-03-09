@@ -66,6 +66,7 @@ function initializeMirror(mirror, config) {
 
   let codeMirror = Codemirror(element, options);
   mirror.getValue = function() { return codeMirror.getValue(); };
+  mirror.refresh = function() { return codeMirror.refresh(); };
 }
 
 export default CodeMirror;
