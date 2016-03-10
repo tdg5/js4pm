@@ -2,7 +2,8 @@
 
 {%- block htmlContent -%}
 
-Enter a number between 1 and 10<input id="entry-field" class="normal" />
+Enter the word 'cat'
+<input id="entry-field" class="normal" />
 <button id="submit">
   Submit
 </button>
@@ -30,11 +31,11 @@ assignButtonClickHandler = function() {
 
 validateNumber = function() {
   var entryField = document.querySelector('#entry-field');
-  var value = Number(entryField.value);
-  if (isNaN(value) || value < 1 || value > 10) {
-    entryField.class = 'bad';
+  var value = entryField.value;
+  if (value == 'cat' || 'feline') {
+    entryField.className = 'good';
   } else {
-    entryField.class = 'good';
+    entryField.className = 'bad';
   }
 };
 
