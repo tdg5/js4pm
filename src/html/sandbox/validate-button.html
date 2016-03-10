@@ -24,20 +24,16 @@ Enter the word 'cat'
 {%- endblock -%}
 
 {%- block jsContent -%}
-assignButtonClickHandler = function() {
-  var button = document.querySelector('#submit');
-  button.onclick = validateNumber;
-};
+button = document.getElementById('submit');
+button.addEventListener('click', validate);
 
-validateNumber = function() {
-  var entryField = document.querySelector('#entry-field');
-  var value = entryField.value;
-  if (value == 'cat' || 'feline') {
-    entryField.className = 'good';
+function validate () {
+  entry = document.getElementById('entry-field');
+  value = entry.value;
+  if (value === 'cat' || value === 'feline') {
+    entry.className = 'good';
   } else {
-    entryField.className = 'bad';
+    entry.className = 'bad';
   }
 };
-
-window.onload = assignButtonClickHandler;
 {%- endblock -%}
