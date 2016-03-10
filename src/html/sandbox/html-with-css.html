@@ -1,21 +1,29 @@
 {% extends "layouts/sandbox/html-css.html" %}
 
 {%- block htmlContent -%}
+<button>
+  Normal button
+</button>
 <button class="call-to-action">
-  Click Me
+  Call to action!
+</button>
+<button id="large-cta" class="call-to-action">
+  Large call to action!
 </button>
 {%- endblock -%}
 
 {%- block cssContent -%}
-.call-to-action {
-  background-color: red;
+button {
   border: 0;
   border-radius: 4px;
-  box-shadow: 5px 5px rgba(0,0,0,0.2);
-  color: white;
+  box-shadow: 5px 5px rgba(0, 0, 0, .2);
   cursor: pointer;
-  font-size: 2em;
   height: 100%;
   width: 20%;
 }
+.call-to-action {
+  background-color: red;
+  color: white;
+}
+#large-cta { font-size: 2em; }
 {%- endblock -%}

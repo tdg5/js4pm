@@ -37,7 +37,7 @@
       >
         rules
       </a>. Each rule (or ruleset) is composed of one or more selectors and a
-      block of property declarations.
+      block of property declarations
     </li>
     <li>
       <a
@@ -63,24 +63,26 @@
   <img class="vertical-align-top unstyled width-md" data-src="/images/anatomy-of-a-css-rule.png">
 </section>
 <section>
-  <h2>A sample CSS rule</h2>
+  <h2>A few CSS rules</h2>
   <div>
     <pre><code class="css font-size-lg" data-trim>
-/*
-  This selector targets any element that has a class of "call-to-action" to
-  change the elements background color to red.
-*/
+/* match elements by tag */
+button {
+  border: 0;                             /* remove border */
+  border-radius: 4px;                    /* add rounded corners */
+  box-shadow: 5px 5px rgba(0, 0, 0, .2); /* add faint shadow */
+  cursor: pointer;                       /* make mouse cursor a finger */
+  height: 100%;                          /* make height 100% of parent */
+  width: 20%;                            /* make width 20% of parent */
+}
+/* match element by id */
+#large-cta {
+  font-size: 2em;                        /* make text 2x the normal size */
+}
+/* match elements by class */
 .call-to-action {
-  background-color: red; /* Make the background of the button red */
-  border: 0;             /* with no border */
-  border-radius: 4px;    /* with rounded corners */
-  box-shadow: 5px 5px rgba(0, 0, 0, .2);
-                         /* ^ with a faint shadow */
-  color: white;          /* with white text */
-  cursor: pointer;       /* with a pointer-finger mouse cursor */
-  font-size: 2em;        /* with text twice the normal size */
-  height: 100%;          /* with a height 100% the height of its parent */
-  width: 20%;            /* with a width 20% the width of its parent */
+  background-color: red;                 /* make the background red */
+  color: white;                          /* make text white */
 }
     </code></pre>
   </div>
