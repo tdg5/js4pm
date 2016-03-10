@@ -1,0 +1,14 @@
+{% extends "layouts/sandbox/html-mixed.html" %}
+
+{%- block htmlContent -%}
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<input type="text" id="input"></input>
+<button id="capitalize">Capitalize!</button>
+{%- endblock -%}
+
+{%- block jsContent -%}
+$("#capitalize").on("click", function() {
+  input = $("#input");
+  input.val(input.val().toUpperCase());
+});
+{%- endblock -%}
