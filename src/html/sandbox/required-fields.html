@@ -1,0 +1,46 @@
+{% extends "layouts/sandbox/html-mixed.html" %}
+
+{% block htmlContent %}
+First Name: <input id="first-name" class="normal" />
+Last Name: <input id="last-name" class="normal" />
+<button id="submit">
+  Submit
+</button>
+<img
+    class='hidden'
+    id='harry'
+    src='/images/quiditch.gif'
+ >
+
+{% endblock %}
+
+{% block cssContent %}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+  margin: 0 auto;
+}
+img {
+  height: 200px;,
+}
+{% endblock %}
+
+{% block jsContent %}
+first = document.getElementById('');
+last = document.getElementById('');
+img = document.getElementById('');
+button = document.getElementById('');
+
+button.addEventListener(,);
+
+function validate () {
+  firstVal = first.value;
+  lastVal = last.value;
+
+  if () {
+  } else {
+  }
+};
+{% endblock %}
