@@ -36,8 +36,8 @@ gulp.task("build:clean", function() {
 gulp.task("build:copy", function() {
   gulp.src(["src/images/*"]).
     pipe(gulp.dest("build/images"));
-  return gulp.src("src/manifest.json").
-    pipe(gulp.dest("build"));
+  return gulp.src(["src/static/*"]).
+    pipe(gulp.dest("build/static"));
 });
 
 // Build CSS

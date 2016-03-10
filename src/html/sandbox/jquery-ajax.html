@@ -1,0 +1,19 @@
+{% extends "layouts/sandbox/html-css.html" %}
+
+{%- block htmlContent -%}
+<div id="output"></div>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script type="text/javascript">
+  $.ajax("/static/test.json").done(function(data) {
+    output = $("#output");
+    output.text(data["test"]);
+  });
+</script>
+{%- endblock -%}
+
+{%- block cssContent -%}
+#output {
+  font-size: 6em;
+  font-weight: bold;
+}
+{%- endblock -%}
