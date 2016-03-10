@@ -25,8 +25,8 @@ function attachToOutput(logger, outputElem) {
 }
 
 function purgePendingMessages(logger) {
-  let message;
-  while (message = logger.pendingMessages.shift()) {
+  while (logger.pendingMessages.length > 0) {
+    let message = message = logger.pendingMessages.shift();
     logger.log(message);
   }
 }
