@@ -73,6 +73,15 @@
   padding: 1em;
 }
 
+.reveal .example-table {
+  font-size: 80%;
+  width: 100%;
+}
+
+.reveal .example-table td {
+  vertical-align: middle;
+}
+
 .reveal .font-size-xl {
   font-size: 150%;
 }
@@ -171,6 +180,18 @@
 
 .reveal .width-xxl {
   width: 90%;
+}
+
+.reveal code.inline {
+  overflow: hidden;
+  padding: 0 5px;
+}
+
+.reveal pre.inline {
+  line-height: 1;
+  margin: 0 auto;
+  text-align: center;
+  width: auto;
 }
 
 .reveal img.unstyled {

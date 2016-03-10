@@ -1,6 +1,15 @@
 <section>
-  <h1>JavaScript:</h1>
-  <h2>Data Types</h2>
+  <h2>JavaScript: Data Types</h2>
+<pre class="margin-top-lg width-xl"><code class="javascript font-size-lg" data-trim>
+button = document.getElementById('bg-changer');
+button.addEventListener('click', redifyBackground);
+
+function redifyBackground () {
+  content = document.getElementById('content');
+  content.setAttribute('class', 'red');
+}
+</code></pre>
+
 </section>
 <section>
   <h2>JavaScript: Types</h2>
@@ -123,6 +132,6 @@
 </section>
 <section>
   <h2>JavaScript: Data Types</h2>
-  <iframe class="sandbox-lg" src="sandbox/types.html"></iframe>
+  <iframe class="sandbox-md" data-src="sandbox/types.html"></iframe>
 </section>
 {% include "exercises/types.html" %}

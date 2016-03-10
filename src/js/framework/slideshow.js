@@ -1,4 +1,4 @@
-import Reveal from "reveal";
+import Reveal from "reveal.js";
 import {dom} from "./dom";
 import {styler} from "./styler";
 

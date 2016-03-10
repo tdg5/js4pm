@@ -9,8 +9,8 @@ class SandboxSlide extends Slide {
   }
 
   activate(event) {
-    if (this.completed) { return; }
-    slideshow.hideControls();
+    //if (this.completed) { return; }
+    //slideshow.hideControls();
   }
 
   renderComplete(event) {
@@ -30,10 +30,8 @@ class SandboxSlide extends Slide {
 
 function discoverIFrameDocument(element) {
   let iframe = element.querySelector("iframe");
-  let iframeContent = iframe.contentWindow ||
-    iframe.contentDocument.document ||
-    iframe.contentDocument;
-  return iframeContent.document;
+  let iframeContent = iframe.contentWindow || iframe.contentDocument;
+  return iframeContent.document || iframeContent;
 }
 
 function hideInstructions(element) {

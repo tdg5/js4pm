@@ -1,4 +1,4 @@
-import Reveal from "reveal";
+import Reveal from "reveal.js";
 
 class RevealBoot {
   static get configKey() {

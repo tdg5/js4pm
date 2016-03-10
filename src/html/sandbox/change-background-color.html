@@ -1,0 +1,26 @@
+{% extends "layouts/sandbox/html-mixed.html" %}
+
+{% block htmlContent %}
+<div id="content">
+  STUFF GOES IN HERE!
+</div>
+<button id="bg-changer">
+  Red-ify!
+</button>
+{% endblock %}
+
+{% block cssContent %}
+.red {
+  background-color: red;
+}
+{% endblock %}
+
+{% block jsContent %}
+button = document.getElementById('bg-changer');
+button.addEventListener('click', redifyBackground);
+
+function redifyBackground () {
+  content = document.getElementById('content');
+  content.setAttribute('class', 'red');
+}
+{% endblock %}

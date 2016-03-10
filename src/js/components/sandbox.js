@@ -1,10 +1,13 @@
 let RENDERING_SCRIPT = "<script type=\"text/javascript\" src=\"/js/sandbox-rendering.js\"></script>",
   RENDERING_STYLE_SHEET_LINK = "<link rel=\"stylesheet\" href=\"/css/sandbox-rendering.css\"></link>",
   RENDERING_COMPLETE_CALLBACK = "<script type=\"text/javascript\">(function(){window.sandboxSpy.complete();})()</script>",
-  CONTENT_TOP_TO_STYLE = `<!doctype html>\n<html>\n<head>\n${RENDERING_STYLE_SHEET_LINK}\n${RENDERING_SCRIPT}\n<style>\n`,
-  CONTENT_STYLE_TO_SCRIPT = "</style>\n<script type=\"text/javascript\">\n",
-  CONTENT_SCRIPT_TO_BODY = "</script>\n</head>\n<body>\n",
-  CONTENT_BODY_TO_BOTTOM = `${RENDERING_COMPLETE_CALLBACK}\n</body>\n</html>`;
+  CONTENT_SCRIPT_TAG_END = "</script>",
+  CONTENT_SCRIPT_TAG_START = "<script type=\"text/javascript\">",
+  CONTENT_STYLE_TAG_END = "</style>",
+  CONTENT_STYLE_TAG_START = "<style>",
+  CONTENT_TOP_TO_STYLE = `<!doctype html><html><head>${RENDERING_STYLE_SHEET_LINK}${RENDERING_SCRIPT}${CONTENT_STYLE_TAG_START}`,
+  CONTENT_STYLE_TO_BODY = `${CONTENT_STYLE_TAG_END}</head><body>`,
+  CONTENT_SCRIPT_TO_BOTTOM = `${CONTENT_SCRIPT_TAG_END}${RENDERING_COMPLETE_CALLBACK}</body></html>`;
 
 class Sandbox {
   constructor(element, config) {
@@ -32,8 +35,13 @@ function generateContent(sandbox) {
     js = sandbox.codeMirrors.javascript.getValue();
   }
 
-  let content = CONTENT_TOP_TO_STYLE + css + CONTENT_STYLE_TO_SCRIPT + js +
-    CONTENT_SCRIPT_TO_BODY + html + CONTENT_BODY_TO_BOTTOM;
+  let content = CONTENT_TOP_TO_STYLE +
+    css +
+    CONTENT_STYLE_TO_BODY +
+    html +
+    CONTENT_SCRIPT_TAG_START +
+    js +
+    CONTENT_SCRIPT_TO_BOTTOM;
 
   return content;
 }
