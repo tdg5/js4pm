@@ -8,6 +8,7 @@ let config = {
     history: true,
     keyboard: true,
     progress: false,
+    slideNumber: true,
     touch: false,
     transition: "convex",
     width: 1280,
