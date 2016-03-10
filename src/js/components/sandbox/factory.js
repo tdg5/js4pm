@@ -26,6 +26,7 @@ function initializeMirrors(sandbox, mirrors) {
     let mirrorElem = mirrors[i];
     let mirror = new CodeMirror(mirrorElem);
     mirror.refresh();
+    setTimeout(mirror.refresh, 50);
     sandbox.codeMirrors[mirror.mode] = mirror;
   }
 }
