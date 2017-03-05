@@ -17,9 +17,9 @@
 
 {% block jsContent %}
 button = document.getElementById('bg-changer');
-button.addEventListener('click', redifyBackground);
+button.addEventListener('click', redifyBg);
 
-function redifyBackground () {
+function redifyBg () {
   content = document.getElementById('content');
   content.setAttribute('class', 'red');
 }

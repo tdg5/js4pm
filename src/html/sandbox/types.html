@@ -3,9 +3,9 @@
 {%- block dataMode -%}javascript{%- endblock -%}
 
 {%- block content -%}
-now = new Date();
-toDoList = [1, 2, 3];
-minuteToSpare = false;
+var now = new Date();
+var toDoList = [1, 2, 3];
+var minuteToSpare = toDoList.length == 0;
 
 sandbox.log(now);
 sandbox.log(toDoList[0]);

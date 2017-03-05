@@ -3,7 +3,7 @@
 {%- block htmlContent -%}
 
 Enter the word 'cat'
-<input id="entry-field" class="normal" />
+<input id="entry" class="normal" />
 <button id="submit">
   Submit
 </button>
@@ -28,12 +28,12 @@ button = document.getElementById('submit');
 button.addEventListener('click', validate);
 
 function validate () {
-  entry = document.getElementById('entry-field');
-  value = entry.value;
+  var entry = document.getElementById('entry');
+  var value = entry.value;
   if (value === 'cat' || value === 'feline') {
     entry.className = 'good';
   } else {
     entry.className = 'bad';
   }
-};
+}
 {%- endblock -%}
