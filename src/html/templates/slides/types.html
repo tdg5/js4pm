@@ -1,11 +1,11 @@
 <section>
   <h2>JavaScript: Data Types</h2>
 <pre class="margin-top-lg width-xl"><code class="javascript font-size-lg" data-trim>
-button = document.getElementById('bg-changer');
+var button = document.getElementById('bg-changer');
 button.addEventListener('click', redifyBackground);
 
 function redifyBackground () {
-  content = document.getElementById('content');
+  var content = document.getElementById('content');
   content.setAttribute('class', 'red');
 }
 </code></pre>
