@@ -16,11 +16,11 @@
 {% endblock %}
 
 {% block jsContent %}
-button = document.getElementById('bg-changer');
+var button = document.getElementById('bg-changer');
 button.addEventListener('click', redifyBg);
 
 function redifyBg () {
-  content = document.getElementById('content');
+  var content = document.getElementById('content');
   content.setAttribute('class', 'red');
 }
 {% endblock %}
