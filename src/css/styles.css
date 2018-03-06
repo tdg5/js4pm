@@ -167,6 +167,10 @@
   text-align: center;
 }
 
+.reveal .text-align-left {
+  text-align: left;
+}
+
 .reveal .vertical-align-top {
   vertical-align: top;
 }
@@ -223,4 +227,8 @@
 
 .reveal ul.unstyled {
   list-style-type: none;
+}
+
+.d-flex {
+  display: flex;
 }
