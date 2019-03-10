@@ -1,4 +1,4 @@
-# JavaScript for Product Managers
+# JavaScript for the Product Minded
 
 ## Development
 

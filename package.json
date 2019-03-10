@@ -18,7 +18,7 @@
     "reveal.js": "3.2.0",
     "underscore.string": "3.2.3"
   },
-  "description": "JavaScript for Product Managers",
+  "description": "JavaScript for the Product Minded",
   "devDependencies": {
     "babel-preset-es2015": "6.1.2",
     "babel-runtime": "^5.0.0",
