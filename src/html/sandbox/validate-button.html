@@ -2,7 +2,7 @@
 
 {%- block htmlContent -%}
 
-Enter the word 'cat'
+<label>Enter the word "cat":</label>
 <input id="entry" class="normal" />
 <button id="submit">
   Submit
@@ -24,16 +24,16 @@ Enter the word 'cat'
 {%- endblock -%}
 
 {%- block jsContent -%}
-button = document.getElementById('submit');
-button.addEventListener('click', validate);
+button = document.getElementById("submit");
+button.addEventListener("click", validate);
 
 function validate () {
-  var entry = document.getElementById('entry');
+  var entry = document.getElementById("entry");
   var value = entry.value;
-  if (value === 'cat' || value === 'feline') {
-    entry.className = 'good';
+  if (value === "cat" || value === "feline") {
+    entry.className = "good";
   } else {
-    entry.className = 'bad';
+    entry.className = "bad";
   }
 }
 {%- endblock -%}

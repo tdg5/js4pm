@@ -1,33 +1,27 @@
-{% extends "layouts/sandbox/html-mixed.html" %}
+{% extends "layouts/sandbox/html-js.html" %}
 
-{% block htmlContent %}
-<img
-    id='cartoon'
-    src='/images/too-close.png'
+{%- block htmlContent -%}
+<img id="cartoon"
+     src="/images/too-close.png"
  />
+
 <button id="img-changer">
   Change Image!
 </button>
-{% endblock %}
 
-{% block cssContent %}
-img {
-  height: 200px;
-}
+<style>
+  img { height: 200px; }
+</style>
+{%- endblock -%}
 
-button, img {
-  display: block;
-  margin: 0 auto;
-}
-{% endblock %}
-
-{% block jsContent %}
-var newSrc = '', eventName = '';
-var img = document.getElementById('');
-var button = document.getElementById('');
+{%- block jsContent -%}
+var newSrc = "", eventName = "";
+var img = document.getElementById("");
+var button = document.getElementById("");
 
 button.addEventListener(eventName, changeImage);
 
 function changeImage() {
   img.src = newSrc;
-}{% endblock %}
+}
+{%- endblock -%}

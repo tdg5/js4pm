@@ -1,37 +1,34 @@
 {% extends "layouts/sandbox/html-mixed.html" %}
 
-{% block htmlContent %}
+{%- block htmlContent -%}
 First Name: <input id="first-name" class="normal" />
 Last Name: <input id="last-name" class="normal" />
 <button id="submit">
   Submit
 </button>
 <img
-    class='hidden'
-    id='harry'
-    src='/images/quiditch.gif'
+    class="hidden"
+    id="harry"
+    src="/images/quiditch.gif"
  >
+{%- endblock -%}
 
-{% endblock %}
+{%- block cssContent -%}
+.hidden { display: none; }
 
-{% block cssContent %}
-.hidden {
-  display: none;
-}
 .show {
   display: block;
   margin: 0 auto;
 }
-img {
-  height: 200px;,
-}
-{% endblock %}
 
-{% block jsContent %}
-var first = document.getElementById('');
-var last = document.getElementById('');
-var img = document.getElementById('');
-var button = document.getElementById('');
+img { height: 200px; }
+{%- endblock -%}
+
+{%- block jsContent -%}
+var first = document.getElementById("");
+var last = document.getElementById("");
+var img = document.getElementById("");
+var button = document.getElementById("");
 
 button.addEventListener(,);
 
@@ -42,5 +39,5 @@ function validate () {
   if () {
   } else {
   }
-};
-{% endblock %}
+}
+{%- endblock -%}

@@ -7,22 +7,20 @@
 <button class="call-to-action">
   Call to action!
 </button>
-<button id="large-cta" class="call-to-action">
-  Large call to action!
+<button id="bold-cta" class="call-to-action">
+  Bold call to action!
 </button>
 {%- endblock -%}
 
 {%- block cssContent -%}
 button {
-  border-radius: 4px;
-  box-shadow: 5px 5px rgba(0, 0, 0, .2);
+  border-radius: 0.25em;
+  box-shadow: 0.25em 0.25em rgba(0, 0, 0, .2);
   cursor: pointer;
-  height: 100%;
-  width: 20%;
+  font-size: 1.25em;
 }
-.call-to-action {
-  background-color: red;
-  color: white;
-}
-#large-cta { font-size: 2em; }
+
+#bold-cta { font-weight: bold; }
+
+.call-to-action { font-size: 2em; }
 {%- endblock -%}

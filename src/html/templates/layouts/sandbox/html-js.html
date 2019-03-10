@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/js/sandbox.js"></script>
+    <link href="/css/sandbox.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="sandbox">
+      <div class="row">
+        <pre class="cell codemirror" data-line-numbers data-mode="htmlmixed">
+{%- block htmlContent -%}{%- endblock -%}
+        </pre>
+        <div class="cell result">
+          <ul class="toolbar">
+            <li class="action">
+              <button data-action="run">&#9654;&nbsp;Run</button>
+            </li>
+          </ul>
+          <pre class="output"></pre>
+        </div>
+      </div>
+      <div class="row">
+        <pre class="cell codemirror" data-line-numbers data-mode="javascript">
+{%- block jsContent -%}{%- endblock -%}
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
+

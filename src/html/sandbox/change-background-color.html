@@ -1,26 +1,23 @@
-{% extends "layouts/sandbox/html-mixed.html" %}
+{% extends "layouts/sandbox/html-js.html" %}
 
-{% block htmlContent %}
+{%- block htmlContent -%}
 <div id="content">
-  STUFF GOES IN HERE!
+  CHANGE ME!
 </div>
 <button id="bg-changer">
   Red-ify!
 </button>
-{% endblock %}
+<style>
+  .red { background-color: red; }
+</style>
+{%- endblock -%}
 
-{% block cssContent %}
-.red {
-  background-color: red;
-}
-{% endblock %}
-
-{% block jsContent %}
-var button = document.getElementById('bg-changer');
-button.addEventListener('click', redifyBg);
+{%- block jsContent -%}
+var button = document.getElementById("bg-changer");
+button.addEventListener("click", redifyBg);
 
 function redifyBg () {
-  var content = document.getElementById('content');
-  content.setAttribute('class', 'red');
+  var content = document.getElementById("content");
+  content.setAttribute("class", "red");
 }
-{% endblock %}
+{%- endblock -%}
