@@ -45,7 +45,7 @@ gulp.task("build:css", function() {
   return gulp.src("src/css/entries/*.css").
     pipe(cleanCSS({
       keepSpecialComments: 0,
-      relativeTo: "",
+      relativeTo: "./",
       root: "",
     })).
     pipe(gulp.dest("build/css"));
